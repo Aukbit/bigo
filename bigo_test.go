@@ -86,3 +86,11 @@ func BenchmarkFibonacci20(b *testing.B) {
 		Fibonacci(20)
 	}
 }
+
+// --
+// func TestFizzbuzz(t *testing.T) {
+// 	Fizzbuzz()
+// }
+func TestFizzbuzzRecursive(t *testing.T) {
+	FizzbuzzRecursive(1, "")
+}

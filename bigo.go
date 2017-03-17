@@ -1,5 +1,10 @@
 package bigo
 
+import (
+	"fmt"
+	"strconv"
+)
+
 // IsFirstZero O(1) describes an algorithm that the time and space of it's execution
 // is always the same regardless the size of the input dataset
 func IsFirstZero(n []int) bool {
@@ -42,3 +47,43 @@ func Fibonacci(n int) int {
 // BinarySearch O(log N) describes an algorithm that the time and space of it's execution
 // halves on each iteration
 // package sort.Search implements binary search
+
+// FizzBuzz prints the numbers from 1 to 100.
+// But for multiples of three print “Fizz” instead of the number and for the
+// multiples of five print “Buzz”.
+// For numbers which are multiples of both three and five print “FizzBuzz”."
+func Fizzbuzz() {
+
+	for i := 1; i <= 100; i++ {
+		if i%5 == 0 && i%3 == 0 {
+			fmt.Println("fizzbuzz")
+			continue
+		}
+		if i%3 == 0 {
+			fmt.Println("fizz")
+			continue
+		}
+		if i%5 == 0 {
+			fmt.Println("buzz")
+			continue
+		}
+		fmt.Println(i)
+	}
+}
+
+func FizzbuzzRecursive(n int, out string) string {
+	fmt.Println(out)
+	if n > 100 {
+		return ""
+	}
+	if n%5 == 0 && n%3 == 0 {
+		return FizzbuzzRecursive(n+1, "fizzbuzz")
+	}
+	if n%3 == 0 {
+		return FizzbuzzRecursive(n+1, "fizz")
+	}
+	if n%5 == 0 {
+		return FizzbuzzRecursive(n+1, "buzz")
+	}
+	return FizzbuzzRecursive(n+1, strconv.Itoa(n))
+}
