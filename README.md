@@ -1,4 +1,4 @@
-#Big O [![Circle CI](https://circleci.com/gh/aukbit/bigo.svg?style=svg)](https://circleci.com/gh/aukbit/bigo)
+# Big O [![Circle CI](https://circleci.com/gh/aukbit/bigo.svg?style=svg)](https://circleci.com/gh/aukbit/bigo)
 
 Go examples to better understand Big O notation
 
